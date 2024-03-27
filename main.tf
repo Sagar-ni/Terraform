@@ -7,3 +7,11 @@ resource "aws_instance" "NEW" {
   }
 }
 
+
+resource "aws_s3_bucket" "name" {
+  bucket = "its unique bucket for me only"
+  tags = {
+    Name = "first bucket from terraform "
+    Env  = "Dev"
+  }
+}
